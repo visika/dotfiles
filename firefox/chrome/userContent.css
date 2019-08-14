@@ -1,65 +1,107 @@
+/* Dealing with the new tab page */
+/* The search bar is not well styled, 
+ * there is only the shadow, but the bar itself is untouched
+ */
+
 @-moz-document url("about:home"),
 url("about:newtab") {
+    /* Add a background shadow around the search bar */
     .search-wrapper,
     .tile {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10), 0 5px 10px rgba(0, 0, 0, 0.10) !important;
     }
+    
+    /* Change the color of the text of pinned elements */
     .top-site-outer .title.pinned span{
         color: #231f21 !important;
     }
+    
+    /* Add a dark rectangle as a background for the elements in the page */
     .sections-list{
         border-radius: 15px !important;
         background: #18242b !important;
         box-shadow: 0 20px 70px rgba(24, 36, 43, 0.8) !important;
         padding-bottom: 15px !important;
     }
+    
+    /* Make the text of the titles of the sections dark */
     .collapsible-section .section-title span{
         color: #231f21 !important;
     }
+    
     html {
-        height: 100% !important
+        height: 100% !important;
+        /* Hide the scrollbar */
+        scrollbar-width: none !important;
     }
+    
+    /* Customize the body and the background */
     body {
         background:linear-gradient(180deg, #18242b, #00c195);
-	height: 100% !important;
+        height: 100% !important;
         margin: 0 !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
-        overflow-y: hidden !important;
+        /* The line below prevents the page from scrolling down */
+        /*overflow-y: hidden !important;*/
     }
-    body.activity-stream, .root, .root .outer-wrapper, html{
+    
+    /* This code prevents the page from scrolling down */
+    /*body.activity-stream, .root, .root .outer-wrapper, html{
         margin: 0;
         overflow-y:hidden !important;
         overflow-x:hidden;
-    }
+    }*/
+    
+    /* Hide the titles of the sections */
     .section-title{
         display: none;
     }
+    
+    /* Make the color of the title of the pinned elements white 
+     * In contradiction with statement above
+     */
     .top-site-button .title.pinned span{
         color: white !important;
         font-size: 12px;
     }
+    
+    /* Hide the icon for pinned elements 
+     * I find this inconvenient
+     */
+    /*
     .top-site-button .title.pinned .icon{
         display: none !important;
     }
+    */
+    
+    /* Hide the title of the sections */
     .title,
     .section-title span,
     .topic,
     .edit-topsites-wrapper .edit-topsites-button button {
         color: white !important;
     }
+    
+    /* Can't tell the effect */
     .section-title span, .prefs-pane-button button {
         fill: white !important;
     }
+    
+    /* Can't tell the effect */
     .topic .topic-link, .topic .topic-read-more {
         color: white !important;
     }
+    
+    /* Make the appropriate icons circular */
     .top-site-icon.rich-icon, .tile {
         border-radius: 50% !important;
         width: 75px !important;
         height: 75px !important;
         margin: 0 auto;
     }
+    
+    /* Add border and shadow to top sites */
     .top-site-icon.rich-icon {
         border: solid 3px #00c195;
         box-shadow: 0 1px 4px rgba(0, 193, 149, 0.9) !important;
