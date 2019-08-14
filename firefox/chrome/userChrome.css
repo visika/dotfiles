@@ -1,0 +1,34 @@
+@import "global/variables.css";
+@import "global/global.css";
+@import "icons/icons.css";
+@import "tabbar/tabbar.css";
+@import "navbar/navbar.css";
+@import "personalbar/personalbar.css";
+@import "popup/popup.css";
+@import "popup/urlbar-results.css";
+
+.tab-line[selected="true"] {
+    background-color: #01AB84 !important;
+}
+
+#urlbar[focused=true] {
+	border-color: #01AB84 !important;
+    background-color: #262626 !important;
+}
+
+#urlbar {
+    background-color: #262626 !important;
+}
+
+.uautocomplete-richlistitem[selected="true"],
+.urlbarView-row[selected] {
+    background-color: #01AB84 !important;
+}
+
+::-moz-selection {
+    background-color: #01AB84 !important;
+}
+
+/*#titlebar {
+    visibility: collapse;
+}*/
